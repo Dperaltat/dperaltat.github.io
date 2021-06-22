@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;400&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+:root
+{
+  --dblue: #1E2530;
+  --red: #D5274C;
+  --cyan: #21DDC2;
+  --white1: #E5E5E5;
+  --white: #FFFFFF;
+  --black: #000000;
+  --yellow: #FFCE38;
+  --blue1: #14B3F6;
+  --tomato: #FF713B;
+}
+
+.dark
+{
+  --white1: #1E2530;
+  --white: #FFFFFF;
+  --black: #FFFFFF;
+  --red: #D5274C;
+  --cyan: #21DDC2;
+  --yellow: #FFCE38;
+  --tomato: #FF713B;
+}
+
+section
+{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--white1);
+}
+
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+header .navB
+{
+  position: relative;
+  max-width: 64px;
+}
+
+header a
+{
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--black);
+  font-weight: 550;
+}
+
+#MuseoModerno
+{
+  position: relative;
+  color: var(--black);
+  font-weight: 550;
+  text-decoration: none;
+  font-family: 'MuseoModerno', cursive;
+}
+
+header ul
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li
+{
+  list-style: none;
+  display: flex;
+  margin-left: 30px;
+}
+
+header ul li a
+{
+  display: inline-block;
+  color: var(--black);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.content
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.content .textBox
+{
+  position: relative;
+  max-width: 600px;
+  z-index: 2;
+  margin-right: 10px;
+}
+
+.content .textBox h1
+{
+  font-size: 3.5em;
+  color: var(--cyan);
+  line-height: 1.4em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.content .textBox p
+{
+  color: var(--black);
+}
+
+.content .textBox a
+{
+  font-family: 'MuseoModerno', cursive;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: linear-gradient(180deg, #FF5075 0%, var(--red) 100%);
+  color: var(--white);
+  border-radius: 60px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.content .imgBox
+{
+  position: relative;
+  width: 760px;
+  display: felx;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .imgBox::before
+{
+  content: '';
+  position: absolute;
+  margin-left: 55px;
+  width: 640px;
+  height: 640px;
+  background: linear-gradient(-45deg, var(--yellow) 0%, var(--tomato) 100%);
+  border-radius: 50%;
+}
+
+.content .imgBox img
+{
+  position: relative;
+  z-index: 1;
+  max-width: 805px;
+}
+
+.themeSwitch::before
+{
+  content: '\f185';
+  font-family: fontAwesome;
+  color: var(--white);
+}
+
+.themeSwitch
+{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background: var(--dblue);
+  display: inline-flex;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.themeSwitch.active::before
+{
+  content: '\f186';
+}
