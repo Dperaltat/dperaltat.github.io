@@ -48,6 +48,10 @@
     transform: scale(1.03);
 }
 
+.textshadow{
+	text-shadow: 2px 2px #1d1d1d;
+}
+
 .navbar-item :hover{
     background-color: #2d2d2d !important;
 }
